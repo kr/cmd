@@ -1,0 +1,10 @@
+Command diceware labels its input with numerals from
+1 to 6 to produce a diceware-style formatted word list.
+
+install
+    go get github.com/kr/cmd/diceware
+
+usage
+    diceware <words
+
+where words contains one word on each line.
