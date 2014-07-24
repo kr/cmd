@@ -37,12 +37,10 @@ func b6digits(n int) int {
 // dicenum formats n as a diceware label: in base 6 using the
 // numerals 1 through 6 (not 0), padded to b digits.
 func dicenum(n, b int) string {
-	s := ""
-	for i := 0; i < b; i++ {
-		s = string('1'+n%6) + s
-		n /= 6
+	if b == 0 {
+		return ""
 	}
-	return s
+	return dicenum(n/6, b-1) + string('1'+n%6)
 }
 
 // readlines reads r to EOF and returns a slice of lines
