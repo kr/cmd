@@ -31,7 +31,7 @@ func main() {
 // b6digits returns the number of digits necessary
 // to represent n in base 6.
 func b6digits(n int) int {
-	return int(math.Floor(math.Log(float64(n))/math.Log(6))) + 1
+	return int(math.Log(float64(n))/math.Log(6)) + 1
 }
 
 // dicenum formats n as a diceware label: in base 6 using the
